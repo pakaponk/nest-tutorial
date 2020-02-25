@@ -1,0 +1,10 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+  - image: cat-api
+    context: .
+deploy:
+  kubectl:
+    manifests:
+      - k8s-*
